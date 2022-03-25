@@ -1,0 +1,14 @@
+body {
+  background-color: $color-bg-site;
+  background-image: url("../../images/bg-image-body.png"), url("../../images/bg-image-body.png");
+  background-repeat: no-repeat;
+  background-size: 780px 780px;
+  background-position: calc(50% + 480px) -215px, calc(50% + 730px) 1620px;
+}
+
+//-----Responsive-----
+@include breakpoint-down(1180px) {
+  body {
+    background-position: calc(50% - 0px) -354px;
+  } 
+}

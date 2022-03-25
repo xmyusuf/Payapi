@@ -1,0 +1,35 @@
+.navbar__list {
+  @include flex-style(center, space-between);
+  @include list-unstyled(none);
+}
+
+.navbar__item ~ .navbar__item {
+  margin-left: 40px;
+}
+
+.navbar__link {
+  @include link-unstyled;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 18px;
+  color: $color-middle-blue;
+  opacity: 0.7;
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: scale(1.5);
+  }
+
+  &:active {
+    color: $color-middle-blue;
+    opacity: 1;
+  }
+}
+
+//-----Responsive-----
+
+@include breakpoint-down(680px) {
+  .navbar__list {
+    display: none;
+  }
+}

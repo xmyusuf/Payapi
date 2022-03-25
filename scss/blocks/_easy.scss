@@ -1,0 +1,78 @@
+// -----Easy-----
+
+.easy__wrapper {
+  @include flex-style(center, flex-start);
+  padding-top: 50px;
+}
+
+.easy__picture {
+  position: relative;
+  left: -56px;
+}
+
+.easy__title {
+  margin: 0;
+  margin-bottom: 24px;
+  font-family: "DM Serif Display";
+  font-weight: 400;
+  font-size: 48px;
+  color: $color-middle-blue;
+}
+
+.easy__text {
+  margin: 0;
+  width: 445px;
+  font-weight: 400;
+  font-size: 15px;
+  color: $color-light-blue;
+}
+
+@include breakpoint-down(1060px){
+  .easy__wrapper {
+    flex-direction: column;
+  }
+
+  .easy__picture {
+    position: relative;
+    left: 20px;
+  }
+
+  .easy__title {
+    text-align: center;
+  }
+
+  .easy__text {
+    width: 573px;
+    text-align: center;
+  }
+}
+
+@include breakpoint-down(647px) {
+.easy__picture {
+  width: 328px;
+  height: 208px; 
+}
+
+.easy__title {
+  margin-bottom: 24px;
+  font-size: 36px;
+  line-height: 36px;
+  }
+
+.easy__text {
+  padding-bottom: 80px;
+  width: 328px;
+  font-size: 15px;
+  line-height: 28px;
+  }
+}
+
+@include breakpoint-down(350px) {
+  .easy__title {
+    font-size: 30px;
+  }
+
+  .easy__text {
+    font-size: 10px;
+  }
+}

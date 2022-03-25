@@ -1,0 +1,121 @@
+//-----About-----
+
+.about {
+  background-color:  $color-dark-blue;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-image: url("../../images/bg-image-body.png");
+  background-repeat: no-repeat;
+  background-size: 780px 780px;
+  background-position: calc(50% - 560px) -350px;
+}
+
+.about__wrapper {
+  @include flex-style(center, space-between);
+}
+
+.about__inner {
+  width: 445px;
+}
+
+.about__heading {
+  margin: 0;
+  margin-bottom: 24px;
+  font-family: "DM Serif Display";
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 56px;
+  color: $color-water-white;
+}
+
+.about__text {
+  margin: 0;
+  margin-bottom: 32px;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 28px;
+  color: $color-water-white;
+  opacity: 0.7;
+}
+
+.about__link {
+  padding: 15px 32px;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 18px;
+  text-align: center;
+  color: $color-water-white;
+  @include link-unstyled;
+  border: 1px solid $color-water-white;
+  box-sizing: border-box;
+  border-radius: 24px;
+  
+  &:active {
+    background: $color-white;
+    border: 1px solid $color-water-white;
+    color: $color-dark-blue;
+  }
+}
+
+.about__list {
+  width: 536px;
+  @include list-unstyled(none);
+  @include flex-style(center, space-between);
+  flex-wrap: wrap;
+}
+
+.about__item {
+  @include flex-style(center, none);
+  width: 178px;
+  height: 51px;
+}
+
+//-----Responsive-----
+
+@include breakpoint-down(1020px) {
+  .about {
+    background-position: calc(50% - 18px) -554px;
+  }
+
+  .about__wrapper {
+    flex-direction: column-reverse;
+  }
+
+  .about__heading {
+    margin-top: 64px;
+  }
+
+  .about__inner {
+    text-align: center;
+  }
+
+  .about__list {
+    margin-left: 66px;
+  }
+}
+
+@include breakpoint-down(556px) {
+  .about__list {
+    width: 356px;
+    margin-left: 50px;
+  }
+
+  .about__item {
+    margin-bottom: 40px;
+  }
+
+  .about__inner {
+    width: 300px;
+  }
+
+  .about__heading {
+    margin-top: 30px;
+    font-size: 32px;
+    line-height: 36px;
+  }
+
+  .about__text {
+    font-size: 15px;
+    line-height: 28px;
+  }
+}

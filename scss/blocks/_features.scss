@@ -1,0 +1,116 @@
+//-----Features-----
+
+.features {
+  padding-top: 100px;
+}
+
+.features__list {
+  @include flex-style(center, space-between);
+  @include list-unstyled(none);
+}
+
+.features__item--finances {
+  max-width: 350px;
+  text-align: center;
+
+  &::before {
+    margin: 0 auto;
+    width: 106px;
+    height: 106px;
+    display: block;
+    background-image: url("../../images/finances.png");
+    background-repeat: no-repeat;
+    content: "";
+  }
+}
+
+.features__item--banking {
+  max-width: 350px;
+  text-align: center;
+
+  &::before {
+  margin: 0 auto;
+  width: 106px;
+  height: 106px;
+  display: block;
+  background-image: url("../../images/banking.png");
+  background-repeat: no-repeat;
+  content: "";
+  }
+}
+
+.features__item--payments {
+  max-width: 350px;
+  text-align: center;
+
+  &::before {
+  margin: 0 auto;
+  width: 106px;
+  height: 106px;
+  display: block;
+  background-image: url("../../images/card.png");
+  background-repeat: no-repeat;
+  content: "";
+  }
+}
+
+.features__heading {
+  margin: 0;
+  margin-bottom: 16px;
+  margin-top: 32px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 25px;
+  color: $color-middle-blue;
+}
+
+.features__text {
+  margin: 0;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 25px;
+  color: $color-light-blue;
+}
+
+//-----Responsive-----
+
+@include breakpoint-down(1075px) {
+
+  .features__item--finances {
+    width: 223px;
+    height: 329px;
+  }
+  .features__item--banking {
+    width: 223px;
+    height: 329px;
+  }
+  .features__item--payments {
+    width: 223px;
+    height: 329px;
+  }
+
+  .features__text {
+    width: 223px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@include breakpoint-down(736px) {
+  .features__list {
+    display: block;
+  }
+
+  .features__item--finances {
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }
+  .features__item--banking {
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }
+  .features__item--payments {
+    margin: 0 auto;
+    margin-bottom: 30px; 
+  }
+}

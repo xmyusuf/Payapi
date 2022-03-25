@@ -1,0 +1,69 @@
+//-----Header-----
+
+.header {
+  padding-top: 40px;
+}
+
+.header__wrapper {
+  @include flex-style(center, space-between);
+}
+
+.header__inner {
+  @include flex-style(center, space-between);
+  
+}
+
+.logo-link {
+  margin-right: 64px;
+  @include link-unstyled;
+  display: block;
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: scale(1.5);
+  }
+}
+
+.logo-link__img {
+  display: inline-block;
+  width: 135px;
+  height: 38px;
+}
+
+.header__btn {
+  padding: 15px 26px;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 18px;
+  color: $color-water-white;
+  background: $color-dark-pink;
+  box-shadow: 10px 10px 25px -10px rgba(54, 83, 107, 0.25);
+  border-radius: 24px;
+  border: none;
+
+  &:hover {
+    cursor: pointer;
+    background-color: rgb(202, 63, 156);
+  }
+
+  &:active {
+    cursor: pointer;
+    background: $color-light-pink;
+    box-shadow: 10px 10px 25px -10px rgba(54, 83, 107, 0.25);
+  }
+}
+
+.header__hamburger {
+  display: none;
+}
+
+//-----Responsive-----
+@include breakpoint-down(680px){
+  .header__btn {
+    display: none;
+  }
+
+  .header__hamburger {
+    display: block;
+  }
+}
